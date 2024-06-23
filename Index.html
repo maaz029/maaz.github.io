@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RapidRepair - Fast, Reliable iPhone Repair Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1em 0;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1em;
+        }
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        header nav ul li {
+            margin-right: 1em;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        header .cta {
+            background: #ff6600;
+            color: #fff;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        section {
+            display: none;
+            padding: 2em 0;
+        }
+        .visible {
+            display: block;
+        }
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 5em 0;
+        }
+        .hero h2 {
+            font-size: 3em;
+            margin: 0 0 0.5em;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin: 0 0 1em;
+        }
+        .hero .cta {
+            background: #ff6600;
+            color: #fff;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .services .service-item,
+        .testimonials blockquote {
+            background: #fff;
+            padding: 1em;
+            margin: 1em 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        footer .social-media a {
+            color: #fff;
+            margin: 0 0.5em;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>RapidRepair</h1>
+            <nav>
+                <ul>
+                    <li><a onclick="showSection('home')">Home</a></li>
+                    <li><a onclick="showSection('services')">Services</a></li>
+                    <li><a onclick="showSection('about')">About Us</a></li>
+                    <li><a onclick="showSection('testimonials')">Testimonials</a></li>
+                    <li><a onclick="showSection('contact')">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="cta" onclick="showSection('contact')">Get a Quote</a>
+        </div>
+    </header>
+
+    <section id="home" class="hero visible">
+        <div class="container">
+            <h2>Fast, Reliable iPhone Repair Services</h2>
+            <p>We fix your phone while you wait</p>
+            <a class="cta" onclick="showSection('contact')">Schedule a Repair</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-item">
+                <h3>Screen Replacement</h3>
+                <p>Quick and affordable screen repairs.</p>
+            </div>
+            <div class="service-item">
+                <h3>Battery Replacement</h3>
+                <p>Restore your phone’s battery life.</p>
+            </div>
+            <div class="service-item">
+                <h3>Water Damage Repair</h3>
+                <p>We can fix phones damaged by water.</p>
+            </div>
+            <a class="cta" onclick="showSection('contact')">View All Services</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>RapidRepair is dedicated to providing fast and reliable iPhone repair services. Our team of certified technicians use only high-quality parts to ensure your device is fixed correctly the first time.</p>
+            <p>Our mission is to get you back to your digital life as quickly as possible. We understand how important your phone is to you, and we strive to offer the best service with a smile.</p>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <blockquote>
+                <p>RapidRepair fixed my iPhone in less than an hour! Highly recommended.</p>
+                <cite>- John Doe</cite>
+            </blockquote>
+            <blockquote>
+                <p>Great service and very professional staff.</p>
+                <cite>- Jane Smith</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="cta">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <p>Email: info@rapidrepair.com</p>
+                <p>Phone: +92 3134440009</p>
+                <p>Address: Dubai Plaza Murree Road, Rawalpindi</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 RapidRepair. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('visible');
+            });
+            document.getElementById(sectionId).classList.add('visible');
+        }
+    </script>
+</body>
+</html>
